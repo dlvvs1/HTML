@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>My Forms Page</title>
+    </head>
+
+    <body>
+
+        <form action = "index.php" method = "POST" enctype = "multipart/form-data">
+
+            <label for=" username">username:</label>
+            <input type = "text" id = "username" placeholder = "Enter your username" minlength = "6" maxlength = "15" required><br><br>
+
+            <label for=" password">password:</label>
+            <input type = "password" id = "password" placeholder = "password" minlength="8"  maxlength="15"><br><br>
+
+            <label for=" email">email:</label>
+            <input type = "email" id = "email" placeholder = "youremail@gmail.com" required><br><br>
+
+            <label for="phone">phone:</label>
+            <input type = "tel" id = "phone" placeholder = "123-456-7890" , pattern = "[0-9]{3} - 0-9]{3} - 0-9]{4} "><br><br>
+
+            <label for="dob">DOB :</label>
+            <input type = "DATE" id = "dob"><br><br>
+
+            <label for="quantity">quantity:</label>
+            <input type = "number" id = "quantity" min = "0" max = "100"><br><br>
+
+            <label for="Mr . ">Mr .</label>
+            <input type = "radio" id = "Mr . " name = "title">
+            <label for="Ms . ">Ms .</label>
+            <input type = "radio" id = "Ms . " name = "title">
+            <label for="other . ">Other</label>
+            <input type = "radio" id = "other . " name = "title"><br><br>
+
+            <label for = "payment">payment:</label>
+            <select id = "payment">
+                <option value = "credit card">credit card</option>
+                <option value = "debit card">debit card</option>
+                <option value = "paypal">paypal</option>
+            </select><br><br>
+
+            <label for = "follow">follow me:</label>
+            <input type = "checkbox" id = "follow"><br><br>
+
+            <label for = "comment">comment:</label>
+            <input type = "comment" id = "comment"><br><br>
+
+            <label for = "file">file:</label>
+            <input type = "file" id = "file" accept = "image/png , image/jpeg"><br><br>
+
+            <input type = "reset"> <br><br>
+            <input type = "submit">
+
+
+        </form>
+
+    </body>
+</html>

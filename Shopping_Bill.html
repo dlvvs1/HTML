@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Bill</title>
+</head>
+    <body>
+        <h2 id = "bill"></h2>
+            <script>
+                let bill = {
+                    pen: 10,
+                    notebook: 50,
+                    bag: 500
+                    };
+                    pens = prompt("Enter number of pens bought : ");
+                    notebooks = prompt("Enter number of notebooks bought : ");
+                    bags = prompt("Enter number of bags bought : ");
+
+                    function TotalBill(){
+                        return (pens * bill.pen) + (notebooks * bill.notebook) + (bags * bill.bag);
+                    }
+
+                    function Discount(){
+                        let dis = TotalBill();
+                        return dis - (10 * dis)/100;
+                    }
+
+                    let calculatebill = TotalBill();
+                    let withdiscount = Discount();
+                    document.getElementById("bill").innerHTML = "Total pens : " + pens + "<br>Total notebooks : " + notebooks + "<br>Total bags : " + bags + "<br>Total Bill : " + calculatebill + "<br>Total Bill with discount(Final Amount) : " + withdiscount ;
+            </script>
+    </body>
+</html>

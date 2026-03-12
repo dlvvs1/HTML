@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank App</title>
+</head>
+    <body>
+        <h2 id="result"></h2>
+            <script>
+                    const account = {
+                        name: "Ravi",
+                        balance: 1000
+                    };
+                    function deposit() {
+                        const depo = Number(prompt("How much are you depositing?"));
+                        account.balance += depo;
+                    }
+                    function withdraw() {
+                        const widrl = Number(prompt("Enter the withdrawal amount:"));
+                        if (widrl > account.balance) {
+                            alert("Insufficient Balance! Please enter a valid amount.");
+                        } 
+                        else {
+                            account.balance -= widrl;
+                        }
+                    }
+                    function checkBalance(){
+                        return account.balance;
+                    }
+
+                    deposit();
+                    withdraw();
+                    let finalBalance = checkBalance();
+                    document.getElementById("result").innerHTML = "Account Holder: " + account.name + "<br>Final Balance: " + account.balance;
+            </script>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks</title>
+</head>
+    <body>
+        <h3 id = "marks"></h3>
+            <script>
+                let student = {
+                    name: "Rahul",
+                    maths: 78,
+                    science: 85,
+                    english: 90
+                };
+
+                // Write a function to calculate total marks.
+
+                function TotalMarks(marks){
+                    return marks.english + marks.science + marks.maths;
+                }
+
+                // Write a function to calculate average marks.
+
+                function TotalAverage(marks) {
+                    let total = TotalMarks(marks);
+                    return total/3;
+                }
+
+                // Write a function to determine the grade based on the average.
+
+                function Grade(marks) {
+                    let avg = TotalAverage(marks);
+
+                    if(avg >= 80){
+                        return "Grade A";
+                    }
+                    else if(avg >= 60){
+                        return "Grade B";
+                    }
+                    else{
+                        return "Grade C"
+                    }
+                }
+
+                let Tmarks = TotalMarks(marks);
+                let tavg = TotalAverage(marks);
+                let overallGrade = Grade(marks);
+
+                document.getElementById("marks").innerHTML = "student name :" + student.name + "<br>student Total Marks :" + TotalMarks(student) + "<br>student Total Average :" + TotalAverage(student) + "<br>student Grade :" + Grade(student);
+            </script>
+
+    </body>
+</html>
