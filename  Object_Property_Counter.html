@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>obj_cal</title>
+</head>
+<body>
+    <div class="main">
+        <h3 id="count"></h3>
+    </div>
+    <script>
+        let cars = {
+                brand: "Toyota",
+                model: "Innova",
+                year: 2022,
+                color: "White"
+                   };
+                   
+                   let res=0;
+                   for(let car in cars){
+                    res++
+                   }
+                   document.getElementById("count").innerHTML=res;
+    </script>  
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>num_analyizer</title>
+</head>
+<body>
+    <div class="main">
+        <input type="text" id="input" placeholder="enter an number">
+        <button id="submit" onclick="submit()" >submit</button>
+        <h3 id="len"></h3>
+        <h3 id="sum"></h3>
+        <h3 id="pal"></h3>
+    </div>
+
+    <script >
+        function submit(){
+            x=document.getElementById("input").value;
+            let len=x.length;
+            document.getElementById("len").innerHTML="length :" + len;
+            let res=0;
+            for(let i=0;i<x.length;i++){
+                res=res+Number(x[i]);
+            }
+            document.getElementById("sum").innerHTML= "sum :" + res;
+            let rev="";
+            for(let i=len-1;i>=0;i--){
+                rev=rev+x[i];
+            }
+            if(rev==x){
+                document.getElementById("pal").innerHTML=("num is palindrome");
+            }
+            else{
+                document.getElementById("pal").innerHTML=("num is not palindrome")
+            }
+
+
+        }
+    </script>
+    
+</body>
+</html>

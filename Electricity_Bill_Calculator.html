@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="controls">
+                <input type="text" id="dis" placeholder="enter the no.of units">
+                <button id="submit" onclick="cal()" >calculate</button>
+                <button id="clear" onclick="cleardata()">clear</button>
+        </div>
+        <div class="main2">
+                    <h3 id="bill"></h3>
+        </div>
+    </div>
+    <style>
+        .main{
+            width: 500px;
+            height: 500px;
+            margin: 250px 350px;
+        }
+        .controls{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        input{
+            margin: 5px;
+        }
+
+        button{
+            margin: 5px;
+        }
+        .main2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+    <script>
+        function cal(){
+            let x = Number(document.getElementById("dis").value);
+            if(x>=200){
+                let y=x-200;
+                let z=(100*5)+(100*7)+(10*y);
+                document.getElementById("bill").innerHTML="total amount :"+z;
+            }
+            else if(x>=100){
+                let y=x-100;
+                let z=(100*5)+(y*7);
+                document.getElementById("bill").innerHTML="total amount :"+z;
+            }
+            else{
+                let z= x*5;
+                document.getElementById("bill").innerHTML="total amount :"+z;
+            } 
+        }
+        function cleardata(){
+            document.getElementById("dis").value="";
+            document.getElementById("bill").innerHTML="";
+        }
+        
+    </script>
+
+</body>
+</html>
